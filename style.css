@@ -1,0 +1,167 @@
+:root {
+    --color-primario: #3D1B5B;
+    --color-secundario: #7E3DAF;
+    --color-acento: #B586D6;
+    --color-fondo: #F8F6FA;
+    --color-contraste: #1B1B1B;
+    --color-claro: #E5D3F2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-acento);
+    padding: 15px;
+}
+
+.top-bar .contact-info {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-email {
+    width: 100px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.top-bar .contact-info img {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.top-bar .contact-info img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.email-icon {
+    align-items: center;
+}
+
+.email-icon:hover {
+    cursor: pointer;
+}
+
+.email-icon svg {
+    color: var(--color-primario);
+    transition: color 0.3s ease-in-out;
+}
+
+.email-icon:hover svg {
+    color: var(--color-secundario);
+}
+
+.logo-email, .contact-info span {
+    vertical-align: middle;
+}
+
+.top-bar a {
+    background-color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-contraste);
+    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.top-bar a:hover {
+    background-color: var(--color-contraste);
+    color: var(--color-secundario);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    background-color: var(--color-claro);
+    color: var(--color-contraste);
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li .a1 {
+    font-weight: bold;
+    background-color: var(--color-secundario);
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li .a1:hover {
+    background-color: var(--color-contraste);
+    color: var(--color-secundario);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li .a2 {
+    background-color: var(--color-secundario);
+    padding: 5px 10px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar ul li .a2:hover {
+    background-color: var(--color-contraste);
+    color: var(--color-secundario);
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--color-contraste);
+    padding: 5px 10px;
+    display: block;
+}
+
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-claro);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 150px;
+}
+
+.navbar ul li ul li a {
+    padding: 5px 15px;
+    color: var(--color-contraste);
+}
+
+.navbar ul li ul li a:hover {
+    background-color: var(--color-secundario);
+}
+
+.navbar ul li:hover ul {
+    display: block;
+}
